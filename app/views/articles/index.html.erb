@@ -28,12 +28,14 @@
 
 <%= link_to 'New Article', new_article_path %>
 
+<h1>Search</h1>
 <%= search_form_for @q do |f| %>
-  <%= f.label :title_cont %>
-  <%= f.search_field :title_cont %>
-
-  <%= f.label :comments_author_cont %>
-  <%= f.search_field :comments_author_cont %>
+  <%= f.label :comments_body_cont %>
+  <%= f.search_field :comments_body_cont %>
+  <%= label_tag :page, :page do %>
+    Page: <%= select_tag :page, options_for_select([1, 2]) %>
+  <% end %>
+  <%= hidden_field_tag :per_page, 10 %>
 
   <%= f.submit "search" %>
 <% end %>

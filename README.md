@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The following repo ilustrates why calling `to_a.uniq` on paginated search results is not ideal
 
-Things you may want to cover:
+# SETUP
+``` shell
+$ bin/rails db:setup db:migrate db:seed
+```
+# START SERVER
 
-* Ruby version
+``` shell
+$ bin/rails s
+```
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+now visit `http://localhost:3000/articles` and use the search to search for all articles that have `dog` word in comments on page 1 and page 2
